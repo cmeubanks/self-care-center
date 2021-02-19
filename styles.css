@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  height: 100%;
   background-image: linear-gradient(to top, #f7e4bf, #78a7c6, #134d71);
   background-repeat: no-repeat;
   display: flex;
@@ -21,9 +22,12 @@ body {
 }
 
 main {
+  height: 500px;
+  width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -32,12 +36,12 @@ h1 {
 }
 
 h2{
-  font: bold 1.3em 'Quicksand', sans-serif;
+  font: bold 1.5em 'Quicksand', sans-serif;
   color: #ffffff;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
-/* Button Section */
+/* Sections */
 .button-section {
   background-color: #ffffff;
   display: flex;
@@ -46,13 +50,40 @@ h2{
   border-radius: 8px;
 }
 
+.message-section {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  height: 130px;
+  width: 700px;
+  margin-top: 100px;
+}
+
+/* Buttons */
 .radio-buttons {
-  margin: 5px 100px 5px 100px;
+  margin: 5px 60px 5px 60px;
   padding: 15px 50px 15px 50px;
 }
 
+input[type='radio'] + label {
+  font: italic 1.1em 'Quicksand', sans-serif;
+}
+
+input[type='radio'] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+input[type='radio'] + label[for='affirmation']{
+  margin-right: 150px;
+}
+
 button {
-  font: .9em 'Quicksand', sans-serif;
+  font: 1.1em 'Quicksand', sans-serif;
   color: #ffffff;
   background-color: #134d71;
   border: none;
@@ -65,11 +96,19 @@ button {
 }
 
 /* Message Section */
-
-
-
+/* .message-section {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  height: 130px;
+  width: 700px;
+  margin-top: 100px;
+} */
 
 img {
-  height: 30px;
-  width: 30px;
+  height: 70px;
+  width: 70px;
 }
