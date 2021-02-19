@@ -2,13 +2,13 @@
 // When a user selects a message option and then clicks the “Receive Message” button, the user sees a random message from the list of possible messages for that category
 // When the message appears, the mediation icon disappears from the message area
 
-//Iteration 1: After the user selects a radio button (affirmation or Mantra) and then clicks receive message button, they will see a message appear where the meditate icon was (image disappears)
-//The set-up: create arrays for both the affirmation and mantra which store respective message (in new file)
-//create hidden html section where message will appear
+//Iteration 1: After the user selects a radio button (affirmation or Mantra) and then clicks receive message button, they will see a RANDOM message appear where the meditate icon was (image disappears)
+//The set-up:
 //create varaibles to querySelect radio buttons, submit buttons, and new HTML message area
-//golbal vartiable of current message
+//global vartiable of current message
 //global empty array (for class instances of message)
 //Functionality:
+//function that creates a random number (to be used for array index);
 //event listener of click & function to see what buttons have been selected
 //function loops through radio buttons to see the value of what has been selected
 //hides image
