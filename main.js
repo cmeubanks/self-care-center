@@ -23,7 +23,7 @@ view2.classList.remove('hidden');
 };
 
 function getRandomNumber(array) {
-  return Math.floor(Math.random() * Math.floor(max));
+  return Math.floor(Math.random() * Math.floor(array.length));
 }
 
 function checkRadioBtn() {
@@ -37,18 +37,16 @@ function checkRadioBtn() {
 }
 
 function showMessage() {
-  changeView(imageView, messageView);
   var button = checkRadioBtn();
-  debugger
   if(button === 'mantra'){
-  currentMessage = new Message(mantras[1])
-  savedMessages.push(currentMessage)
+  currentMessage = new Message(mantras[getRandomNumber(mantras)])
   displayMessage.innerText = currentMessage.message;
   } else if(button === 'affirmation') {
-    currentMessage = new Message(affirmations[1])
-    savedMessages.push(currentMessage)
+    currentMessage = new Message(affirmations[getRandomNumber(affirmations)])
     displayMessage.innerText = currentMessage.message;
   } else {
-    window.alert('Select message type');
+    receiveBtn.disabled   //check to see if this actually works
+    return alert('Select message type!')
   }
+  changeView(imageView, messageView);
 }
