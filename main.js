@@ -9,14 +9,34 @@
 //global empty array (for class instances of message)
 //Functionality:
 //function that creates a random number (to be used for array index);
-//event listener of click & function to see what buttons have been selected
-//function loops through radio buttons to see the value of what has been selected
+
 //hides image
 //set up conditional: if meditate button has been clicked then instance of message class = this
 //                    else, class instance is this
 //current message gets pushed to global array and then also replaces .innerText of dom node
 
-
-
 //research: how to querySelect radio buttons (can I use querySelect All and a loop to see which value has been selected)
 //what properties does my message class need?
+
+var radioBtn = document.querySelectorAll('input[name="radio"]');
+var receiveBtn = document.querySelector('.receive-button');
+
+receiveBtn.addEventListener('click', displayMessage);
+
+
+
+
+/*functions*/
+function changeView(){
+
+}
+
+function displayMessage() {
+  var checkedBtn
+  for(var i = 0; i < radioBtn.length; i++){
+    if(radioBtn[i].checked){
+      checkedBtn = radioBtn[i].value
+    }
+  }
+  return checkedBtn
+}
