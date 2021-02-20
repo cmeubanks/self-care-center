@@ -43,11 +43,11 @@ function showMessage() {
   if(button === 'mantra'){
   currentMessage = new Message(mantras[1])
   savedMessages.push(currentMessage)
-  displayMessage.innerText = currentMessage;
+  displayMessage.innerText = currentMessage.message;
   } else if(button === 'affirmation') {
     currentMessage = new Message(affirmations[1])
     savedMessages.push(currentMessage)
-    displayMessage.innerText = currentMessage;
+    displayMessage.innerText = currentMessage.message;
   } else {
     window.alert('Select message type');
   }
