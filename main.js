@@ -1,45 +1,32 @@
-// Iteration 1: Minimum Viable Product (MVP) - Add Random Affirmation and Mantra feature
-// When a user selects a message option and then clicks the “Receive Message” button, the user sees a random message from the list of possible messages for that category
-// When the message appears, the mediation icon disappears from the message area
 
-//Iteration 1: After the user selects a radio button (affirmation or Mantra) and then clicks receive message button, they will see a RANDOM message appear where the meditate icon was (image disappears)
-//The set-up:
-//create varaibles to querySelect radio buttons, submit buttons, and new HTML message area
-//global vartiable of current message
-//global empty array (for class instances of message)
-//Functionality:
-//function that creates a random number (to be used for array index);
+/* global variables */
+var savedMessages = [];
+var currentMessage
 
-//set up conditional: if meditate button has been clicked then instance of message class = this
-//                    else, class instance is this
-//current message gets pushed to global array and then also replaces .innerText of dom node
-
-//research: how to querySelect radio buttons (can I use querySelect All and a loop to see which value has been selected)
-//what properties does my message class need?
 /* html element selectors */
 var imageView = document.querySelector('#image-view');
-var messageView =document.querySelector('#message-view');
+var messageView = document.querySelector('#message-view');
+var displayMessage = document.querySelector('.display-message');
 /* button selectors */
 var radioBtn = document.querySelectorAll('input[name="radio"]');
 var receiveBtn = document.querySelector('.receive-button');
 
-receiveBtn.addEventListener('click', displayMessage);
+receiveBtn.addEventListener('click', showMessage);
 
 
 
 
 /*functions*/
-function changeView(view1, view2){
+function changeView(view1, view2) {
 view1.classList.add('hidden');
 view2.classList.remove('hidden');
 };
 
-function getRandomNumber(array){
-  return Math.floor(Math.random() * Math.floor)
+function getRandomNumber(array) {
+  return Math.floor(Math.random() * Math.floor(max));
 }
 
-function displayMessage() {
-  changeView(imageView, messageView);
+function checkRadioBtn() {
   var checkedBtn
   for(var i = 0; i < radioBtn.length; i++){
     if(radioBtn[i].checked){
@@ -47,4 +34,21 @@ function displayMessage() {
     }
   }
   return checkedBtn
+}
+
+function showMessage() {
+  changeView(imageView, messageView);
+  var button = checkRadioBtn();
+  debugger
+  if(button === 'mantra'){
+  currentMessage = new Message(mantras[1])
+  savedMessages.push(currentMessage)
+  displayMessage.innerText = currentMessage;
+  } else if(button === 'affirmation') {
+    currentMessage = new Message(affirmations[1])
+    savedMessages.push(currentMessage)
+    displayMessage.innerText = currentMessage;
+  } else {
+    window.alert('Select message type');
+  }
 }
