@@ -1,11 +1,3 @@
-// User can add their own message
-// Add an “Add Message” button in a logical spot.
-//      Create button in HTML under where the messages are displaying
-
-// When the user clicks “Add Message” a form will appear in the message box. The form should contain two inputs - one to specify which type of message is being added, and another to add the text of the message itself. The form should also contain a “Submit” button.
-//      Create hidden form element in HTML -one with radio buttons to select message type (way to reuse  checkRadioBtn?)
-//      other form input is for text and then below this is a submit button
-//      make sure to add to changeView function
 
 // If the user doesn’t specify the type of message, they should get an error and be unable to submit their message until the type is specified.
     //conditional within submit button event handler that throws error message
@@ -29,19 +21,25 @@ var currentMessage
 var imageView = document.querySelector('#image-view');
 var messageView = document.querySelector('#message-view');
 var displayMessage = document.querySelector('.display-message');
+var mainPage = document.querySelector('.main-page');
+var formPage = document.querySelector('.form-page');
 
 /* button selectors */
 var radioBtn = document.querySelectorAll('input[name="radio"]');
 var receiveBtn = document.querySelector('.receive-button');
+var addMessageBtn = document.querySelector('.add-message');
 
 /* event listeners */
 receiveBtn.addEventListener('click', showMessage);
+addMessageBtn.addEventListener('click', createMessage);
 
 /*functions*/
-function changeView(view1, view2) {
+function changeView(view1, view2, view3) {
 view1.classList.add('hidden');
 view2.classList.remove('hidden');
-};
+view3.classList.add('hidden');
+view4.classList.add('hidden');
+}
 
 function getRandomNumber(array) {
   return Math.floor(Math.random() * Math.floor(array.length));
@@ -71,3 +69,7 @@ function showMessage() {
   }
   changeView(imageView, messageView);
 };
+
+function createMessage() {
+  changeView(mainPage, formPage, messageView);
+}

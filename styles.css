@@ -69,6 +69,20 @@ h2{
   margin-top: 100px;
 }
 
+.form-view {
+  margin-top: 15px;
+  height: 175px;
+  width: 700px;
+}
+
+.instructions {
+  margin-bottom: 0;
+}
+
+input[type=text] {
+  width: 275px;
+}
+
 /* Buttons */
 .radio-buttons {
   margin: 5px 60px 5px 60px;
@@ -99,6 +113,11 @@ button {
 }
 
 .receive-button {
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 /* images */
