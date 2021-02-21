@@ -1,24 +1,38 @@
 # Self Care Center
-## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+### Description
+Having a day? Hop onto the Self Care Center application to receive encouraging messages based on your preferred message style, affirmation or mantra! Users also have the option to create and add their own message to the application.
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+### How it Works
+- Select message type
+- Select "Receive Message"
+- Review your randomly generated message
+- Select "Add Message" to create your own affirmation or mantra
+- On the new page view you can input your own message
+- Don't forget to select your message type! Error messages appear if the user has not provided enough data.
+- Select "submit" to view your created message on the main page
+- Your custom message has now been added to the application so you can view it in the future!
 
-## Learning Goals
+### Technologies Implemented:
+- Javascript
+- HTML
+- CSS
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+### Future Updates
+- Ability to favorite and delete messages
+- Utilization of local storage to save application messages and preferences on page refresh
 
-## Setup
+******************************************************************
+Github Pages Link: https://cmeubanks.github.io/self-care-center/
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+#### Contributors:
+- Caroline Eubanks
 
+### Show A Random Mantra or Affirmation:
+![](https://media.giphy.com/media/xpb02jiobyVWxYDw9v/giphy.gif)
+
+### Error if no Message type is selected:
+![](https://media.giphy.com/media/t4PHQf69vGeWoUxiZJ/giphy.gif)
+
+### Create Own Message:
+![](https://media.giphy.com/media/GPP34biPkp92Op0ZrB/giphy.gif)
