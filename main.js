@@ -1,18 +1,3 @@
-
-// If the user doesn’t specify the type of message, they should get an error and be unable to submit their message until the type is specified.
-    //conditional within submit button event handler that throws error message
-    //return that displays this message and ends function?
-// When the user clicks the “Submit” button and that message will be added to the appropriate list of messages.
-  //adds message to respectice array with .push and uses .value to get user input message and reassigns to class "display-message"
-
-// When a new message is added, that message should automatically be displayed in the message box, instead of the meditation icon.
-  //hides form and displays main page again with new message
-
-// As you add these new elements to the page, be sure to match the style of existing elements.
-
-// NOTE: None of this needs to persist on page refresh, unless you also complete the local storage feature
-//research - different types of error message displays - ones builot into HTML?
-
 /* global variables */
 var currentMessage
 
@@ -65,7 +50,7 @@ function resetButtons() {
       radioBtn[i].checked = false;
     }
   }
-}
+};
 
 function showMessage() {
   var button = checkRadioBtn();
@@ -83,7 +68,6 @@ function showMessage() {
 };
 
 function showFormPage() {
-  debugger
   mainPage.classList.add('hidden');
   messageView.classList.add('hidden');
   formPage.classList.remove('hidden');
@@ -91,17 +75,20 @@ function showFormPage() {
   resetButtons();
 };
 
+function updateMessageValue(array) {
+  currentMessage = new Message(userMessage.value)
+  displayMessage.innerText = currentMessage.message
+  array.push(currentMessage.message);
+  resetButtons();
+}
+
 function createMessage() {
   event.preventDefault();
   var button = checkRadioBtn();
   if(button === 'mantra'){
-    currentMessage = new Message(userMessage.value)
-    displayMessage.innerText = currentMessage.message
-    mantras.push(currentMessage.message);
+    updateMessageValue(mantras);
   } else if (button === 'affirmation') {
-    currentMessage = new Message(userMessage.value)
-    displayMessage.innerText = currentMessage.message
-    affirmations.push(currentMessage.message)
+    updateMessageValue(affirmations);
   } else {
     return alert('Select message type!')
   }
