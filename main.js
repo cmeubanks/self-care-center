@@ -61,18 +61,15 @@ function showMessage() {
     currentMessage = new Message(affirmations[getRandomNumber(affirmations)])
     displayMessage.innerText = currentMessage.message;
   } else {
-    receiveBtn.disabled   //check to see if this actually works
     return alert('Select message type!')
   }
   changeView(imageView, messageView);
 };
 
 function showFormPage() {
-  mainPage.classList.add('hidden');
-  messageView.classList.add('hidden');
-  formPage.classList.remove('hidden');
   userMessage.value = '';
   resetButtons();
+  changeView(mainPage, formPage, messageView);
 };
 
 function updateMessageValue(array) {

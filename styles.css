@@ -1,12 +1,3 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
-
 /* HTML Element Rule Declarations */
 html {
   height: 100%;
@@ -87,7 +78,6 @@ input[type=text] {
   margin-left: 40px;
   font: .9em 'Quicksand', sans-serif;
 }
-
 /* Buttons */
 .radio-buttons {
   margin: 5px 60px 5px 60px;
@@ -125,7 +115,7 @@ button {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-/* images */
+/* image */
 img {
   height: 70px;
   width: 70px;
