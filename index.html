@@ -9,22 +9,41 @@
     <h1>✨ Self Care Center ✨</h1>
   </header>
     <main>
-      <h2>Which type of message?</h2>
-      <section class="button-section">
-        <div class="radio-buttons">
-          <input type="radio" id="affirmation" name="radio" value="affirmation">
-          <label for="affirmation">affirmation</label>
-          <input type="radio" id="mantra" name="radio" value="mantra">
-          <label for="mantra">mantra</label>
-        </div>
-        <button class="receive-button">Receive Message</button>
-      </section>
+      <div class="message-type-wrapper main-page">
+        <h2>Which type of message?</h2>
+        <section class="button-section">
+          <div class="radio-buttons">
+            <input type="radio" id="affirmation" name="radio" value="affirmation">
+            <label for="affirmation">affirmation</label>
+            <input type="radio" id="mantra" name="radio" value="mantra">
+            <label for="mantra">mantra</label>
+          </div>
+          <button class="receive-button">Receive Message</button>
+        </section>
+      </div>
       <section class="message-section" id="image-view">
         <img src="./assets/meditate.svg" alt="meditate image">
       </section>
       <section class="message-section hidden" id="message-view">
         <p class="display-message"></p>
+        <button class="add-message">Add Message</button>
       </section>
+      <div class="message-type-wrapper form-page hidden">
+        <h2>Add Your Own Message:</h2>
+        <form class="message-section form-view">
+          <p class="instructions">Select your message type:</p>
+          <div class="radio-buttons">
+            <input type="radio" id="user-affirmation" name="radio" value="affirmation">
+            <label for="affirmation">affirmation</label>
+            <input type="radio" id="user-mantra" name="radio" value="mantra">
+            <label for="mantra">mantra</label>
+          </div>
+          <label for="user-message">Enter your message:
+            <input type="text" name="user-message" id="user-message">
+          </label>
+          <button class="submit-button">Submit</button>
+        </form>
+      </div>
     </main>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="messageData.js"></script>
