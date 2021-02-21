@@ -80,7 +80,7 @@ function updateMessageValue(array) {
   displayMessage.innerText = currentMessage.message
   array.push(currentMessage.message);
   resetButtons();
-}
+};
 
 function createMessage() {
   event.preventDefault();
