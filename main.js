@@ -52,14 +52,17 @@ function resetButtons() {
   }
 };
 
+function generateMessages(array) {
+  currentMessage = new Message(array[getRandomNumber(array)])
+  displayMessage.innerText = currentMessage.message;
+};
+
 function showMessage() {
   var button = checkRadioBtn();
   if(button === 'mantra'){
-  currentMessage = new Message(mantras[getRandomNumber(mantras)])
-  displayMessage.innerText = currentMessage.message;
+  generateMessages(mantras)
   } else if(button === 'affirmation') {
-    currentMessage = new Message(affirmations[getRandomNumber(affirmations)])
-    displayMessage.innerText = currentMessage.message;
+  generateMessages(affirmations)
   } else {
     return alert('Select message type!')
   }
